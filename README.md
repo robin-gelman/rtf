@@ -8,8 +8,9 @@ From CRAN:
 ```
 install.packages("rtf")
 ```
-
-or from github:
+若希望正常显示中文。
+it was revised to support Chinese characters here.
+please install it from github: 
 ```
 library(devtools)
 install_github("robin-gelman/rtf")
