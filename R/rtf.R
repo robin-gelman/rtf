@@ -858,8 +858,8 @@ setMethodS3("addSessionInfo", "RTF", function(this, locale = TRUE, ...) {
 ######################################################################################
 # chinese support
 .start.rtf<-function(width=8.5,height=11,omi=c(1,1,1,1)) {
-	paste("{\\rtf1\\ansi\\ansicpg936\\deflang1033\\deflangfe2052\n\\deff",.add.font.table(),.add.color.table(),.add.paper.size(width=width,height=height),"\n",.add.page.margins(omi),"\n",.add.page.numbers(),"\n",sep="")
-}
+	paste("{\\rtf1\\ansi\\ansicpg936\\deflang1033\\deflangfe2052\n\\deff","\n",.add.font.table(),"\n","{\\fonttbl{\\f0\\fmodern\\fprq6\\fcharset134 \\'cb\\'ce\\'cc\\'e5;}}\n",.add.paper.size(width=width,height=height),"\n",.add.page.margins(omi),"\n",.add.page.numbers(),"\n",sep="")
+}			  
 
 .add.font.table<-function() {
 	fonts<-character()
