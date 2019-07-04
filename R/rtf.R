@@ -858,17 +858,17 @@ setMethodS3("addSessionInfo", "RTF", function(this, locale = TRUE, ...) {
 ######################################################################################
 # chinese support
 .start.rtf<-function(width=8.5,height=11,omi=c(1,1,1,1)) {
-	paste("{\\rtf1\\ansi\\ansicpg936\\deflang1033\\deflangfe2052\n\\deff","\n",.add.font.table(),"\n","{\\fonttbl{\\f0\\fmodern\\fprq6\\fcharset134 \\'cb\\'ce\\'cc\\'e5;}}\n",.add.paper.size(width=width,height=height),"\n",.add.page.margins(omi),"\n",.add.page.numbers(),"\n",sep="")
+	paste("{\\rtf1\\ansi\\ansicpg936\\deflang1033\\deflangfe2052\n\\deff","\n",.add.font.table(),"\n","{\\fonttbl{\\f1\\fmodern\\fprq6\\fcharset134 \\'cb\\'ce\\'cc\\'e5;}}\n",.add.paper.size(width=width,height=height),"\n",.add.page.margins(omi),"\n",.add.page.numbers(),"\n",sep="")
 }			  
 
 .add.font.table<-function() {
 	fonts<-character()
 	fonts[1]<-"{\\f1\\fswiss\\fcharset0 \\'cb\\'ce\\'cc\\'e5;}" # Songti
-	fonts[2]<-"{\\f1\\fswiss\\fcharset0 Helvetica;}" # default
-	fonts[3]<-"{\\f2\\ffroman\\charset0\\fprg2 Times New Roman;}"
-	fonts[4]<-"{\\f3\\ffswiss\\charset0\\fprg2 Arial;}"
-	fonts[5]<-"{\\f4\\fftech\\charset0\\fprg2 Symbol;}"
-	fonts[6]<-"{\\f4\\ffroman\\charset0\\fprg2 Cambria;}"
+	fonts[2]<-"{\\f2\\fswiss\\fcharset0 Helvetica;}" # default
+	fonts[3]<-"{\\f3\\ffroman\\charset0\\fprg2 Times New Roman;}"
+	fonts[4]<-"{\\f4\\ffswiss\\charset0\\fprg2 Arial;}"
+	fonts[5]<-"{\\f5\\fftech\\charset0\\fprg2 Symbol;}"
+	fonts[6]<-"{\\f6\\ffroman\\charset0\\fprg2 Cambria;}"
 	
 	paste("{\\fonttbl",paste(fonts,collapse="\n"),"}",sep="\n")
 }
