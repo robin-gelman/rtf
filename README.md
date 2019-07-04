@@ -12,7 +12,7 @@ install.packages("rtf")
 or from github:
 ```
 library(devtools)
-install_github("schaffman5/rtf")
+install_github("robin-gelman/rtf")
 ```
 
 
